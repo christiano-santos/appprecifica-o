@@ -1,0 +1,49 @@
+.subcontainer-product-fraction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subcontainer-product-fraction > h2 {
+    margin: 20px;
+    padding: 10px;
+}
+
+.products-product-fraction{
+    margin: 10px 0;
+    height: 60vh;
+}
+
+.container-form-product-fraction{
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    
+}
+
+.container-form-product-fraction  div {
+    margin: 5px 0;
+}
+
+
+
+.container-form-product-fraction  div label{
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+}
+
+.container-form-product-fraction > div > div {
+    display: flex;
+    justify-content: center;
+}
+
+.container-form-product-fraction > div > div input{
+    width:   23%;
+    padding: 5px;
+    margin:  5px;
+}
+
+input::placeholder{
+    font-size: 13px;
+    font-weight: bold;
+}

@@ -1,0 +1,31 @@
+.subcontainer-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subcontainer-product > h2{
+    margin: 2% 0;
+}
+
+.products-product > form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 60vh;
+    gap: 10px;
+}
+
+/* .products-product > div{
+    margin: 5px;
+}*/
+
+.products-product > form > div{
+    display: flex;
+    align-items: baseline;
+} 
+
+.products-product > form > div label{
+    margin-left: 10px;
+}
+
+  
