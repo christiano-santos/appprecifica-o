@@ -23,15 +23,16 @@ function ResultFinal(){
             }else {
                 setmo(parseFloat(p[prod]['totalgasto']));
             }
+            return null;
         });
-    },[]);
-    //quebrar esse codigo em um component ou dois
+    },[theContext.productFraction]);
+
     const Div = () => {
         return(
             theContext.productFraction.map((val) => {
                 return(
                     <div key={val}>
-                        {Object.keys(val) != 'preco-hora' &&
+                        {Object.keys(val) !== 'preco-hora' &&
                             <>
                                 <label htmlFor={Object.keys(val)}>{Object.keys(val)}</label>
                                 <span>R$ {val[Object.keys(val)]['totalgasto']}</span>

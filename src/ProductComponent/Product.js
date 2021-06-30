@@ -1,17 +1,15 @@
 import { Link } from 'react-router-dom';
 import Seta from '../SetaComponent/Seta';
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import './Product.css';
 import GlobalContext from '../Global/GlobalState';
 
 function Product(){
-    //resolver código dos inputs
-    const [products, setProducts] = useState(new Array);
+    const [products, setProducts] = useState([]);
     const theContext = useContext(GlobalContext);
 
     const SaveContext = () =>{
         theContext.products = products;
-        // console.log(theContext.products); 
     }
 
     const handleProducts = (e) =>{
@@ -29,13 +27,7 @@ function Product(){
         }else{
             products.splice(products.indexOf(inputValue),1);
         }
-    }
-    
-    // remover esse bloco em prod
-    // useEffect(() => {
-    //     console.log(products);
-    // },[products]);
-    
+    } 
     return(
         <div className='container'>
             <div className='subcontainer-product'>

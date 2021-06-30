@@ -7,14 +7,14 @@ import GlobalContext from '../Global/GlobalState';
 function ProductFraction(){
 
     const theContext = useContext(GlobalContext);
-    const [prodFraction, setprodFraction] = useState(new Array);
+    const [prodFraction, setprodFraction] = useState([]);
 
     useEffect(() => {
         const productCalc = theContext.products.map((p) => {
             return { [p] : {fracao:0,tprod:0,valor:0,totalgasto:0}};
         });
         setprodFraction(productCalc);
-    },[]);
+    },[theContext.products]);
 
 
     const handleSubmit = (e) => {    
@@ -42,9 +42,6 @@ function ProductFraction(){
         });
         theContext.productFraction = prodFraction;
     }
-
-
-    //quebrar esse codigo em um component ou dois
     const Div = () => {
         return(
             theContext.products.map((val) => {
